@@ -23,7 +23,7 @@ function Holder(props) {
       <Container fluid>
         <Row>
           {props.children.map((child, index) => (
-            <Col key={index} lg={4} md={6} xs={12} className="p-2">
+            <Col key={index} lg={6} md={6} xs={12} className="p-2">
               {child}
             </Col>
           ))}

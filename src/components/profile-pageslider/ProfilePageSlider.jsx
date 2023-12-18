@@ -4,12 +4,14 @@ import {
   faEnvelope,
   faUser,
   faUsers,
+  faScrewdriverWrench
 } from "@fortawesome/free-solid-svg-icons";
 
 import styled from "styled-components";
 
 // importing pages
 import ProjectsPage from "../../pages/Projects";
+import AboutMe from "../../pages/AboutMe";
 
 const PageCard = styled.section`
   width: 100%;
@@ -26,18 +28,20 @@ export default function ProfilePageSlider(props) {
   return (
     <PageSlider style={{ color: "white" }}>
       <PageSliderPage
-        indicatorRepresentor={<FontAwesomeIcon icon={faEnvelope} />}
+        indicatorRepresentor={<FontAwesomeIcon icon={faScrewdriverWrench} style={{fontSize: "2rem", color: "#f63"}} />}
       >
         <PageCard>
           <ProjectsPage/>
         </PageCard>
       </PageSliderPage>
-      <PageSliderPage indicatorRepresentor={<FontAwesomeIcon icon={faUser} />}>
-        <h1>Second Page</h1>
+      <PageSliderPage indicatorRepresentor={<FontAwesomeIcon icon={faUser} style={{fontSize: "2rem", color: "#f63"}} />}>
+      <PageCard>
+          <AboutMe/>
+        </PageCard>
       </PageSliderPage>
-      <PageSliderPage indicatorRepresentor={<FontAwesomeIcon icon={faUsers} />}>
+      {/* <PageSliderPage indicatorRepresentor={<FontAwesomeIcon icon={faUsers} />}>
         <h1>Third Page</h1>
-      </PageSliderPage>
+      </PageSliderPage> */}
     </PageSlider>
   );
 }
